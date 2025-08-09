@@ -11,3 +11,11 @@ console.log(newPrice);
 
 // const num = 40 / 0;
 // console.log(num);
+
+
+// function name( x , y) {
+//     const result = x + y;
+//     return result;
+// }
+// const sum= name(2 ,4);
+//     console.log(sum);

@@ -27,3 +27,10 @@
 // var a = isNaN('11');
 //  var a = isNaN(2-10);
 //  console.log(a)
+
+function mileToKilo(mile) {
+  const kilo = mile * 1.60934;
+  return kilo;
+}
+const kilo = mileToKilo(2);
+console.log(kilo);
