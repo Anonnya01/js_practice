@@ -60,21 +60,69 @@
 // console.log(total);
 
 // ----------cart--------//
-const products = [
-  { quantity: 2, name: "Shampoo", price: 1200 },
-  { quantity: 1, name: "face-wash", price: 2200 },
-  { quantity: 3, name: "Cream", price: 2200 },
-  { quantity: 4, name: "tonner", price: 2300 },
-];
+// const products = [
+//   { quantity: 2, name: "Shampoo", price: 1200 },
+//   { quantity: 1, name: "face-wash", price: 2200 },
+//   { quantity: 3, name: "Cream", price: 2200 },
+//   { quantity: 4, name: "tonner", price: 2300 },
+// ];
 
-function shopping(product) {
-  let total = 0;
-  for (const product of products) {
-    const thisProductCost = product.price * product.quantity;
-    total = total + thisProductCost;
+// function shopping(product) {
+//   let total = 0;
+//   for (const product of products) {
+//     const thisProductCost = product.price * product.quantity;
+//     total = total + thisProductCost;
+//   }
+//   return total;
+// }
+
+// const total = shopping(products);
+// console.log(total);
+
+// ----------discount-----------//
+
+// function discount(quantity) {
+
+//   if (quantity <= 100) {
+//     const total = quantity * 100;
+//     return total;
+//   } else if (quantity <= 200) {
+//     const total = quantity * 90;
+//     return total;
+//   } else {
+//     const total = quantity * 70;
+//     return total;
+//   }
+// }
+
+// const total = discount(500);
+// console.log(total);
+
+// ---------layered discount-------//
+
+function layeredDiscount(quantity) {
+  const price1 = 100;
+  const price2 = 90;
+  const price3 = 70;
+
+  if (quantity <= 100) {
+    const total = quantity * price1;
+    return total;
+  } else if (quantity <= 200) {
+    const price1Total = 100 * price1;
+    const remaining = quantity - 100;
+    const remainingSum = remaining * 90;
+    const total = remainingSum + price1Total;
+    return total;
+  } else {
+    const price1Total = 100 * price1;
+    const price2Total = 100 * price2;
+    const remaining = quantity - 200;
+    const remainingSum = remaining * price3;
+    const total = remainingSum + price1Total + price2Total;
+    return total;
   }
-  return total;
 }
 
-const total = shopping(products);
-console.log(total);
+const discount = layeredDiscount(220)
+console.log(discount);
