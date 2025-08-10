@@ -17,8 +17,8 @@
 
 
 
-// short hand
+// // short hand
 
-var price = 30;
-price += 20;
-console.log(price);
+// var price = 30;
+// price += 20;
+// console.log(price);
