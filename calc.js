@@ -100,29 +100,67 @@
 
 // ---------layered discount-------//
 
-function layeredDiscount(quantity) {
-  const price1 = 100;
-  const price2 = 90;
-  const price3 = 70;
+// function layeredDiscount(quantity) {
+//   const price1 = 100;
+//   const price2 = 90;
+//   const price3 = 70;
 
-  if (quantity <= 100) {
-    const total = quantity * price1;
-    return total;
-  } else if (quantity <= 200) {
-    const price1Total = 100 * price1;
-    const remaining = quantity - 100;
-    const remainingSum = remaining * 90;
-    const total = remainingSum + price1Total;
-    return total;
-  } else {
-    const price1Total = 100 * price1;
-    const price2Total = 100 * price2;
-    const remaining = quantity - 200;
-    const remainingSum = remaining * price3;
-    const total = remainingSum + price1Total + price2Total;
-    return total;
-  }
-}
+//   if (quantity <= 100) {
+//     const total = quantity * price1;
+//     return total;
+//   } else if (quantity <= 200) {
+//     const price1Total = 100 * price1;
+//     const remaining = quantity - 100;
+//     const remainingSum = remaining * 90;
+//     const total = remainingSum + price1Total;
+//     return total;
+//   } else {
+//     const price1Total = 100 * price1;
+//     const price2Total = 100 * price2;
+//     const remaining = quantity - 200;
+//     const remainingSum = remaining * price3;
+//     const total = remainingSum + price1Total + price2Total;
+//     return total;
+//   }
+// }
 
-const discount = layeredDiscount(220)
-console.log(discount);
+// const discount = layeredDiscount(220)
+// console.log(discount);
+
+// -------------calculator----------//
+// function add(num1, num2) {
+//   return num1 + num2;
+// }
+// function sub(num1, num2) {
+//   return num1 - num2;
+// }
+// function mult(num1, num2) {
+//   return num1 * num2;
+// }
+// function div(num1, num2) {
+//   return num1 / num2;
+// }
+
+// function calculator(a, b, ope) {
+//   if (ope === "add") {
+//     const result = add(a, b);
+//     return result;
+//   } else if (ope === "sub") {
+//     const result = sub(a, b);
+//     return result;
+//   } else if (ope === "multiply") {
+//     const result = mult(a, b);
+//     return result;
+//   }
+//   else if (ope === "devide") {
+//     const result = div(a, b);
+//     return result;
+//   }
+//   else{
+//     return "invalid"
+//   }
+// }
+
+// const result = calculator(5,7,'sub')
+// console.log(result);
+
